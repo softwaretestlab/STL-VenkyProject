@@ -39,7 +39,9 @@ public class AT01_NavigateTitleAssertScreenshot {
         //screenshot
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         //use ur path below
-        FileUtils.copyFile(screenshotFile, new File("C:\\Users\\softw\\IdeaProjects\\STL-VenkyProject\\src\\test\\java\\screenshot.png"));
+        //FileUtils.copyFile(screenshotFile, new File("C:\\Users\\softw\\IdeaProjects\\STL-VenkyProject\\src\\test\\java\\screenshot.png"));
+        FileUtils.copyFile(screenshotFile, new File(System.getProperty("user.dir")+"\\src\\test\\java\\screenshots\\capture-1.jpeg"));
+
 
 
 
