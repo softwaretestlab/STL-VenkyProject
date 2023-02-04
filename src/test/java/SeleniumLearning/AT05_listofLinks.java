@@ -28,6 +28,21 @@ public class AT05_listofLinks {
         driver.get("https://www.thegoodguys.com.au/UserRegistrationForm?myAcctMain=1&new=Y&catalogId=30000&langId=-1&storeId=900");
         //implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //a --> tag a which we will see for all the links
+        List<WebElement> ListOfLinks= driver.findElements(By.tagName("a"));
+        //count of links
+        int LinksList=  ListOfLinks.size();
+        System.out.println("LinksList : "+LinksList);
+
+        for(int i=0;i<LinksList;i++){
+            String LinkName= ListOfLinks.get(i).getText();
+            System.out.println("LinkName is : "+LinkName);
+
+            if(LinkName.equalsIgnoreCase("LatitudePay")){
+                ListOfLinks.get(i).click();
+                break;
+            }
+        }
 
     }
 

@@ -42,6 +42,7 @@ public class AT03_XpathLearning {
         WebElement CreateAccElement = driver.findElement(By.xpath("//span[contains(text(),'Create account')]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", CreateAccElement);
         Thread.sleep(20000);
+
         //xpath version-4
         //Click on create account button
         driver.findElement(By.xpath("//*[@id='create-account']")).click();
